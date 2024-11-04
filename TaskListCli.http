@@ -1,6 +1,0 @@
-@TaskListCli_HostAddress = http://localhost:5230
-
-GET {{TaskListCli_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
