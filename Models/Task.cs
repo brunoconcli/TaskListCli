@@ -1,8 +1,12 @@
 namespace TaskListCli.Models;
 
+using MongoDB.Bson.Serialization.Attributes;
+
 public class Task
 {
-    public int Id { get; set; }
+    [BsonId]
+    [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
+    public string? Id { get; set; }
     public required string Description { get; set; }
-    public required Boolean Completed { get; set; }
+    public required bool Completed { get; set; }
 }
